@@ -1,0 +1,73 @@
+/* Container for the entire scroller */
+.scroller-container {
+    position: relative;
+    width: 100%;  /* Make it responsive to container's width */
+    max-width: 1000px;  /* You can set a max-width for larger screens */
+    margin: 0 auto;  /* Center the scroller */
+    overflow: hidden;  /* Hide the overflow content */
+    border-radius: 8px;  /* Rounded corners */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);  /* Add subtle shadow */
+  }
+  
+  /* Styling for the image container */
+  .scroller-images {
+    display: flex;  /* Stack images horizontally */
+    transition: transform 0.5s ease;  /* Smooth transition for image sliding */
+  }
+  
+  /* Individual image styling */
+  .scroller-image {
+    width: 100%;  /* Make images take full width of the container */
+    object-fit: cover;  /* Ensure images cover the container without distortion */
+    height: 300px;  /* Set a fixed height for the images */
+    border-radius: 8px;  /* Round the corners of the image */
+  }
+  
+  /* Previous and next buttons */
+  .scroll-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);  /* Vertically center the buttons */
+    background-color: rgba(0, 0, 0, 0.5);  /* Semi-transparent background */
+    color: white;
+    font-size: 2rem;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 50%;
+    z-index: 10;  /* Ensure buttons are above the image */
+    transition: background-color 0.3s ease;  /* Smooth transition on hover */
+  }
+  
+  .scroll-btn:hover {
+    background-color: rgba(0, 0, 0, 0.8);  /* Darken the button on hover */
+  }
+  
+  /* Position the "prev" button to the left */
+  .scroll-btn.prev {
+    left: 10px;
+  }
+  
+  /* Position the "next" button to the right */
+  .scroll-btn.next {
+    right: 10px;
+  }
+  
+  /* Media Queries for Responsiveness */
+  @media (max-width: 768px) {
+    .scroller-image {
+      height: 250px;  /* Reduce image height on smaller screens */
+    }
+  
+    .scroll-btn {
+      font-size: 1.5rem;  /* Smaller arrows on small screens */
+      padding: 8px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .scroller-image {
+      height: 200px;  /* Further reduce height for very small screens */
+    }
+  }
+  
