@@ -1,0 +1,155 @@
+/* General Styles */
+.lmtools{
+    width: 100%;
+    text-align: center;
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+.lmtools-section {
+    width: 80%;
+    text-align: center;
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .lmtools-title {
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 20px;
+    font-weight: 600;
+  }
+  
+  .lmtools-description {
+    width: 60%;
+    text-align: left; /* Align text to the left */
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #555;
+    margin-bottom: 20px;
+    word-wrap: break-word;
+  }
+  
+  .lmtools-subtitle {
+    font-size: 1.5rem;
+    color: #333;
+    margin-top: 30px;
+    margin-bottom: 10px;
+    font-weight: 600;
+  }
+  
+  .lmtools-image {
+    max-width: 700px;
+    height: auto;
+    margin: 20px 0; 
+    border-radius: 8px;
+  }
+  
+  /* Button Style */
+  .lmtools-button {
+    background-color: #007BFF;
+    color: white;
+    padding: 12px 24px;
+    font-size: 1.1rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .lmtools-button:hover {
+    background-color: #0056b3;
+  }
+  
+  /* Responsive Styles */
+  
+  /* For Tablets (max-width: 1024px) */
+  @media (max-width: 1024px) {
+    .lmtools-section {
+      padding: 15px;
+    }
+  
+    .lmtools-title {
+      font-size: 1.8rem;
+    }
+  
+    .lmtools-description {
+      font-size: 1rem;
+      width: 80%; /* Increase width for better readability */
+    }
+  
+    .lmtools-subtitle {
+      font-size: 1.4rem;
+    }
+  
+    .lmtools-button {
+      font-size: 1.1rem;
+      padding: 10px 20px;
+      
+    }
+  
+    .lmtools-image {
+      max-width: 100%;
+    }
+  }
+  
+  /* For Mobile Devices (max-width: 768px) */
+  @media (max-width: 768px) {
+    .lmtools-section {
+      padding: 10px;
+    }
+  
+    .lmtools-title {
+      font-size: 1.6rem;
+    }
+  
+    .lmtools-description {
+      font-size: 1rem;
+      width: 100%; /* Increase width for better readability */
+    }
+  
+    .lmtools-subtitle {
+      font-size: 1.3rem;
+    }
+  
+    .lmtools-button {
+      font-size: 1rem;
+      padding: 8px 16px;
+    }
+  
+    .lmtools-image {
+      max-width: 100%;
+    }
+  }
+  
+  /* For Small Mobile Devices (max-width: 480px) */
+  @media (max-width: 480px) {
+    .lmtools-title {
+      font-size: 1.4rem;
+    }
+  
+    .lmtools-description {
+      font-size: 0.9rem;
+      width: 100%; /* Use full width */
+    }
+  
+    .lmtools-subtitle {
+      font-size: 1.2rem;
+    }
+  
+    .lmtools-button {
+      font-size: 0.9rem;
+      padding: 6px 12px;
+    }
+  
+    .lmtools-image {
+      max-width: 100%;
+    }
+  }
+  
