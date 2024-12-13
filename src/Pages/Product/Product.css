@@ -1,132 +1,145 @@
 /* General Styles */
 .product-page {
-    padding: 20px;
-    font-family: Arial, sans-serif;
-    background-color: #f9f9f9;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+  background-color: #f0f4f8; /* Light blue background */
+  color: #333;
+  max-width: 1200px;
+  margin: 0 auto;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.product-header {
+  text-align: center;
+  margin-bottom: 40px;
+  padding: 20px;
+  background: #0044cc; /* Blue header background */
+  color: white;
+}
+
+.product-title {
+  font-size: 32px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.product-overview {
+  font-size: 18px;
+  color: #f0f4f8; /* Light blue for text contrast */
+}
+
+.product-section {
+  margin: 20px 0;
+  background: white;
+  padding: 20px;
+  border: 1px solid #ddd; /* Adds a subtle border for blocks */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.product-section h2 {
+  font-size: 24px;
+  color: #0044cc; /* Blue for headings */
+  margin-bottom: 10px;
+}
+
+ul {
+  list-style-type: disc;
+  padding-left: 20px;
+}
+
+ul li {
+  font-size: 16px;
+  color: #555;
+  margin-bottom: 5px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+  font-size: 16px;
+}
+
+table, th, td {
+  border: 1px solid #ddd;
+}
+
+th, td {
+  padding: 10px;
+  text-align: left;
+}
+
+th {
+  background-color: #f0f4f8; /* Light blue for table headers */
+  color: #0044cc;
+}
+
+.cta-button {
+  background-color: #0044cc; /* Blue button background */
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  margin: 10px 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+  background-color: #003399; /* Darker blue on hover */
+}
+
+.product-section:last-of-type {
+  text-align: center;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .product-page {
+    padding: 15px;
   }
-  
-  .product-header {
-    text-align: center;
-    margin-bottom: 40px;
-  }
-  
+
   .product-title {
-    font-size: 36px;
-    font-weight: bold;
-  }
-  
-  .product-overview {
-    font-size: 18px;
-    color: #555;
-    margin-bottom: 30px;
-  }
-  
-  .product-section {
-    margin: 20px 0;
-  }
-  
-  .product-section h2 {
     font-size: 28px;
-    color: #333;
+  }
+
+  .product-overview {
+    font-size: 16px;
+  }
+
+  .product-section h2 {
+    font-size: 20px;
+  }
+
+  table {
+    font-size: 14px;
+  }
+
+  .cta-button {
+    width: 100%;
     margin-bottom: 10px;
   }
-  
-  ul {
-    list-style-type: none;
-    padding-left: 0;
+}
+
+@media (max-width: 480px) {
+  .product-title {
+    font-size: 24px;
   }
-  
-  ul li {
-    font-size: 16px;
-    color: #444;
+
+  .product-overview {
+    font-size: 14px;
   }
-  
-  table {
-    width: 100%;
-    border-collapse: collapse;
-    margin-top: 20px;
-  }
-  
-  table, th, td {
-    border: 1px solid #ddd;
-  }
-  
-  th, td {
-    padding: 10px;
-    text-align: left;
-  }
-  
-  th {
-    background-color: #f4f4f4;
-  }
-  
-  .cta-button {
-    background-color: #4CAF50;
-    color: white;
-    border: none;
-    padding: 10px 20px;
+
+  .product-section h2 {
     font-size: 18px;
-    margin-right: 10px;
-    cursor: pointer;
-    margin-top: 10px;
   }
-  
-  .cta-button:hover {
-    background-color: #45a049;
+
+  table {
+    font-size: 12px;
   }
-  
-  /* Responsive Styles */
-  @media (max-width: 768px) {
-    .product-title {
-      font-size: 28px;
-    }
-  
-    .product-overview {
-      font-size: 16px;
-    }
-  
-    .product-section h2 {
-      font-size: 22px;
-    }
-  
-    ul li {
-      font-size: 14px;
-    }
-  
-    table {
-      font-size: 14px;
-    }
-  
-    .cta-button {
-      width: 100%;
-      margin-bottom: 10px;
-    }
+
+  .cta-button {
+    font-size: 14px;
+    padding: 8px;
   }
-  
-  @media (max-width: 480px) {
-    .product-title {
-      font-size: 24px;
-    }
-  
-    .product-overview {
-      font-size: 14px;
-    }
-  
-    .product-section h2 {
-      font-size: 20px;
-    }
-  
-    ul li {
-      font-size: 12px;
-    }
-  
-    table {
-      font-size: 12px;
-    }
-  
-    .cta-button {
-      font-size: 16px;
-      padding: 12px;
-    }
-  }
-  
+}

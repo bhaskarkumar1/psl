@@ -1,9 +1,11 @@
 import React from 'react';
 import './Home.css';
+import ImageCarousel from '../../Components/ImageCarousel/ImageCarousel'
 
 const Home= () => {
   return (
     <div>
+      <ImageCarousel/>
       {/* Hero Section */}
       <section id="home" className="hero">
         <div className="hero-content">

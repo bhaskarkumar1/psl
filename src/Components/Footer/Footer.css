@@ -1,76 +1,37 @@
-/* Footer.css */
+/* Set body and html to 100% height */
+html, body {
+  height: 100%;
+  margin: 0;
+}
 
-/* Basic styling for the footer */
+/* Main content wrapper to push footer to the bottom */
+.main-content {
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Footer Styling */
 .footer {
-    text-align: center;
-    background-color: black;
-    font-size: 14px;
-    color: #fff;
-  }
-  
-  /* Styling for footer links */
-  .footer-link {
-    text-decoration: none;
-    color: #fff;
-    margin: 0 5px;
-  }
-  
-  /* Hover effect for links */
-  .footer-link:hover {
-    text-decoration: underline;
-  }
-  
-  /* Media Queries for responsiveness */
-  
-  /* Large devices like laptops (1024px and up) */
-  @media (min-width: 1024px) {
-    .footer {
-      font-size: 16px;
-      padding: 30px;
-    }
-  }
-  
-  /* Medium devices like tablets (768px to 1023px) */
-  @media (max-width: 1023px) and (min-width: 768px) {
-    .footer {
-      font-size: 15px;
-      padding: 25px;
-    }
-    .footer p {
-      margin: 10px 0;
-    }
-  }
-  
-  /* Small devices like mobile (below 768px) */
-  @media (max-width: 767px) {
-    .footer {
-      font-size: 14px;
-      padding: 20px;
-    }
-  
-    .footer p {
-      margin: 8px 0;
-    }
-  
-    .footer-link {
-      display: inline-block;
-      margin: 5px 0;
-    }
-  }
-  
-  /* Ensures footer is at the bottom */
-  body, html {
-    height: 100%;
-    margin: 0;
-  }
-  
-  .app-container {
-    min-height: 100%;
-    display: flex;
-    flex-direction: column;
-  }
-  
-  .main-content {
-    flex: 1;
-  }
-  
+  background-color: #2d2d2d;
+  color: #ffffff;
+  text-align: center;
+  padding: 20px;
+  font-size: 14px;
+  width: 100%;
+  margin-top: auto; /* Pushes the footer to the bottom if content is shorter */
+}
+
+.footer p {
+  margin: 5px 0;
+}
+
+.footer-link {
+  color: #1e90ff;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.footer-link:hover {
+  text-decoration: underline;
+}

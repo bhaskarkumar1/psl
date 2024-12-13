@@ -1,144 +1,97 @@
-  
-  /* About Section */
-  .about {
-    background-color: #ffffff;
-    text-align: center;
-    padding: 60px 20px;
+/* General Styles */
+.about-page {
+  font-family: Arial, sans-serif;
+  background-color: #f9f9f9;
+  color: #333;
+}
+
+.about-header {
+  background-color: #0066cc;
+  color: white;
+  text-align: center;
+  padding: 40px 20px;
+}
+
+.about-header h1 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+}
+
+.about-header p {
+  font-size: 1.2rem;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.about-content {
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.about-section {
+  background-color: white;
+  margin: 20px 0;
+  padding: 30px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border: 1px solid #ddd;
+}
+
+.about-section h2 {
+  font-size: 2rem;
+  color: #0066cc;
+  margin-bottom: 15px;
+}
+
+.about-section p,
+.about-section ul {
+  font-size: 1rem;
+  color: #555;
+  line-height: 1.6;
+}
+
+.about-section ul {
+  list-style-type: disc;
+  margin-left: 20px;
+}
+
+.about-section ul li {
+  margin-bottom: 10px;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .about-header h1 {
+    font-size: 2rem;
   }
-  
-  .about h1 {
-    font-size: 2.5rem;
-    color: #0066cc;
-    margin-bottom: 20px;
+
+  .about-header p {
+    font-size: 1rem;
   }
-  
-  .about p {
-    font-size: 1.1rem;
-    color: #555;
-    max-width: 800px;
-    margin: 0 auto;
+
+  .about-section h2 {
+    font-size: 1.8rem;
   }
-  
-  /* Mission Section */
-  .mission {
-    background-color: #f9f9f9;
-    text-align: center;
-    padding: 60px 20px;
+
+  .about-section p {
+    font-size: 0.9rem;
   }
-  
-  .mission h2 {
-    font-size: 2.5rem;
-    color: #0066cc;
-    margin-bottom: 15px;
+}
+
+@media (max-width: 480px) {
+  .about-header h1 {
+    font-size: 1.8rem;
   }
-  
-  .mission p {
-    font-size: 1.1rem;
-    color: #555;
-    max-width: 800px;
-    margin: 0 auto;
+
+  .about-header p {
+    font-size: 0.9rem;
   }
-  
-  /* Vision Section */
-  .vision {
-    background-color: #ffffff;
-    text-align: center;
-    padding: 60px 20px;
+
+  .about-section h2 {
+    font-size: 1.6rem;
   }
-  
-  .vision h2 {
-    font-size: 2.5rem;
-    color: #0066cc;
-    margin-bottom: 15px;
+
+  .about-section p {
+    font-size: 0.8rem;
   }
-  
-  .vision p {
-    font-size: 1.1rem;
-    color: #555;
-    max-width: 800px;
-    margin: 0 auto;
-  }
-  
-  /* Values Section */
-  .values {
-    background-color: #f9f9f9;
-    text-align: center;
-    padding: 60px 20px;
-  }
-  
-  .values h2 {
-    font-size: 2.5rem;
-    color: #0066cc;
-    margin-bottom: 15px;
-  }
-  
-  .values ul {
-    list-style-type: none;
-    font-size: 1.1rem;
-    color: #555;
-    max-width: 800px;
-    margin: 0 auto;
-    text-align: left;
-  }
-  
-  .values li {
-    margin-bottom: 15px;
-  }
-  
-  /* History Section */
-  .history {
-    background-color: #ffffff;
-    text-align: center;
-    padding: 60px 20px;
-  }
-  
-  .history h2 {
-    font-size: 2.5rem;
-    color: #0066cc;
-    margin-bottom: 15px;
-  }
-  
-  .history p {
-    font-size: 1.1rem;
-    color: #555;
-    max-width: 800px;
-    margin: 0 auto;
-  }
-  
-  /* Responsive Styles */
-  @media (max-width: 768px) {
-    .about h1,
-    .mission h2,
-    .vision h2,
-    .values h2,
-    .history h2 {
-      font-size: 2rem;
-    }
-  
-    .about p,
-    .mission p,
-    .vision p,
-    .values li,
-    .history p {
-      font-size: 1rem;
-    }
-  }
-  
-  @media (max-width: 480px) {
-    .about h1,
-    .mission h2,
-    .vision h2,
-    .values h2,
-    .history h2 {
-      font-size: 1.8rem;
-    }
-  
-    .about p,
-    .mission p,
-    .vision p,
-    .values li,
-    .history p {
-      font-size: 0.9rem;
-    }
-  }
-  
+}
