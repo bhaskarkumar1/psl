@@ -1,10 +1,15 @@
-/* Set body and html to 100% height */
+/* Ensure body and html take up full height */
 html, body {
   height: 100%;
   margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+  color: #000000; /* Default text color */
+  background-color: #ffffff; /* Default page background color */
 }
 
-/* Main content wrapper to push footer to the bottom */
+/* Main content wrapper */
 .main-content {
   min-height: 100%;
   display: flex;
@@ -13,25 +18,80 @@ html, body {
 
 /* Footer Styling */
 .footer {
-  background-color: #2d2d2d;
-  color: #ffffff;
-  text-align: center;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start; /* Align content to the top */
+  background-color: #000; /* Black background for footer */
+  color: #ffffff; /* White text for footer */
   padding: 20px;
   font-size: 14px;
   width: 100%;
-  margin-top: auto; /* Pushes the footer to the bottom if content is shorter */
+  box-sizing: border-box;
+  margin-top: auto; /* Push footer to bottom */
+  position: relative; /* For positioning copyright at the bottom-right */
 }
 
-.footer p {
+/* Left Section: Address and Contact */
+.footer-left {
+  text-align: left;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.footer-left p {
   margin: 5px 0;
 }
 
-.footer-link {
-  color: #1e90ff;
-  text-decoration: none;
-  font-weight: bold;
+.footer-left .footer-contact {
+  margin-top: 10px;
+  color: #a9a9a9; /* Light grey for contact details */
 }
 
-.footer-link:hover {
+.footer-left .footer-contact p {
+  margin: 5px 0;
+}
+
+/* Center Section: Quick Tabs */
+.footer-center {
+  position: absolute;
+  top: 50%; /* Move to vertical center */
+  left: 50%; /* Move to horizontal center */
+  transform: translate(-50%, -50%); /* Center precisely */
+  display: flex;
+  gap: 20px;
+}
+
+.footer-center a {
+  color: #ffffff; /* White for footer links */
+  text-decoration: none;
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.footer-center a:hover {
+  color: #1e90ff; /* Highlight color on hover */
+  text-decoration: underline;
+}
+
+/* Right Section: Copyright at Bottom-Right */
+.footer-right {
+  position: absolute;
+  bottom: 10px; /* Align to bottom */
+  right: 20px; /* Align to right */
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #a9a9a9; /* Light grey for copyright */
+}
+
+.footer-right a {
+  color: #a9a9a9;
+  text-decoration: none;
+}
+
+.footer-right a:hover {
+  color: #ffffff;
   text-decoration: underline;
 }

@@ -1,9 +1,10 @@
 /* Navbar Styles */
 .navbar {
-  position: relative;  /* Ensure it's properly positioned above other elements */
-  background-color: #ffffff;
-  padding: 1rem;
-  z-index: 1000;  /* Make sure navbar is above everything else */
+  position: relative;
+  background-color: #ffffff; /* Clean white background */
+  padding: 0.5rem 1rem; /* Reduced padding to decrease the navbar height */
+  z-index: 1000;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Light shadow for separation */
 }
 
 .navbar-container {
@@ -19,13 +20,13 @@
   align-items: center;
 }
 
-.navbar-logo-lm{
-  height: 40px; /* Adjust the size of logo 1 */
-  margin-right: 10px; /* Space between the two logos */
+.navbar-logo-lm {
+  height: 35px; /* Adjust logo size */
+  margin-right: 10px;
 }
 
 .navbar-logo-psl {
-  height: 30px; /* Adjust the size of psl.png */
+  height: 25px; /* Adjust size of PSL logo */
 }
 
 .nav-menu {
@@ -33,18 +34,21 @@
   list-style-type: none;
   padding: 0;
   margin-right: 40px;
+  font-size: 0.9rem; /* Reduced font size for compactness */
+  align-items: center;
+  gap: 1.5rem; /* Slightly more space between items */
 }
 
 .nav-item {
-  margin-left: 2rem;
+  margin-left: 1rem;
 }
 
 .nav-links {
-  color: #000;
+  color: #333333; /* Dark gray for neutral text color */
   text-decoration: none;
-  font-size: 1rem;
   position: relative;
-  padding-bottom: 5px; /* Add space for the line */
+  padding-bottom: 5px;
+  transition: color 0.3s ease;
 }
 
 .nav-links::after {
@@ -53,8 +57,8 @@
   bottom: 0;
   left: 0;
   width: 100%;
-  height: 4px; /* Height of the line */
-  background-color: #04688C; /* Line color */
+  height: 4px;
+  background-color: #007BFF; /* Primary color */
   transform: scaleX(0);
   transform-origin: bottom right;
   transition: transform 0.3s ease-out;
@@ -65,19 +69,40 @@
   transform-origin: bottom left;
 }
 
+.nav-links:hover {
+  color: #007BFF; /* Highlight color for active links */
+}
+
+/* Contact Tab */
+.contact-link {
+  display: block;
+  color: white;
+  background-color: #007BFF; /* Primary color for Contact */
+  padding: 8px 15px; /* Adjusted padding */
+  border-radius: 4px; /* Slightly rounded corners */
+  transition: background-color 0.3s ease;
+}
+
+.contact-link:hover {
+  background-color: #0056b3; /* Darker blue for hover effect */
+}
+
+.nav-item.contact-item {
+  margin-left: 1rem; /* Adjusted for consistency */
+}
+
 /* Hamburger Menu */
 .hamburger {
   display: none;
   cursor: pointer;
   flex-direction: column;
   gap: 0.5rem;
-  z-index: 1001;  /* Ensure hamburger icon is above other elements */
 }
 
 .hamburger .line {
   width: 25px;
   height: 3px;
-  background-color: black;
+  background-color: #333333; /* Dark lines for visibility */
 }
 
 /* Product Dropdown Styles */
@@ -86,7 +111,7 @@
 }
 
 .arrow-up, .arrow-down {
-  color: black;
+  color: #333333; /* Dark color for arrows */
   margin-left: 5px;
   font-size: 16px;
   font-weight: bold;
@@ -96,17 +121,17 @@
 
 .dropdown-menu {
   position: absolute;
-  background-color: lightgray;
+  background-color: #f8f8f8; /* Light gray background for dropdown */
   gap: 0.5rem;
-  z-index: 1001; 
+  z-index: 1001;
   top: 100%;
   left: 0;
   width: 150px;
   list-style-type: none;
   margin: 0;
   padding: 0;
-  border-radius: 5px;
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+  border-radius: 4px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1); /* Light shadow */
 }
 
 .dropdown-item {
@@ -115,42 +140,42 @@
 }
 
 .dropdown-item a {
-  color: #fff;
+  color: #333333; /* Neutral dark text color */
   text-decoration: none;
 }
 
 .dropdown-item:hover {
-  background-color: #555;
+  background-color: #f1f1f1; /* Lighter background on hover */
 }
-
 
 /* Media Queries for Responsiveness */
 @media (max-width: 768px) {
   .nav-menu {
-    display: none; /* Hidden by default on mobile */
+    display: none;
     position: absolute;
-    top: 60px; /* Position the menu just below the navbar */
+    top: 60px;
     right: 0;
-    background-color: #fff;
-    width: 30%; /* Full width on small screens */
+    background-color: #ffffff; /* White background on mobile */
+    width: 100%;
     padding: 1rem;
     list-style-type: none;
     margin: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Optional: add shadow */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   }
 
   .nav-item {
     margin: 1rem 0;
-    text-align: center; /* Center the menu items */
+    text-align: center;
   }
 
   .nav-menu.active {
-    display: block; /* Show the menu when active */
+    display: block;
   }
 
   .hamburger {
-    display: flex; /* Show hamburger on small screens */
+    display: flex;
   }
+
   .dropdown-menu {
     position: static;
     width: 100%;
@@ -160,10 +185,10 @@
 
 @media (min-width: 769px) {
   .hamburger {
-    display: none; /* Hide hamburger on larger screens */
+    display: none;
   }
 
   .nav-menu {
-    display: flex; /* Display nav menu horizontally on larger screens */
+    display: flex;
   }
 }

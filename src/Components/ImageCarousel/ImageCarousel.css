@@ -1,94 +1,121 @@
 /* Container that holds the entire scroller */
 .scroller-container {
-    /* width: 100%; */
-    height: 600px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: relative;
-    overflow: hidden;
-    max-width: 100%; /* Ensure full width on smaller screens */
-    /* margin: 0 auto; */
+  height: 400px; /* Reduced the height to 400px */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+  max-width: 100%;
+}
+
+/* For the image container */
+.scroller-images {
+  display: flex;
+  transition: opacity 1s ease-in-out; /* Fade transition */
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  position: relative;
+}
+
+/* Ensure the image fits the container */
+.scroller-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ensure images don't stretch */
+}
+
+/* Style for buttons (arrows) */
+.scroll-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  font-size: 2rem;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  z-index: 10;
+  transition: background-color 0.3s ease;
+}
+
+.scroll-btn:hover {
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+.prev {
+  left: 20px;
+}
+
+.next {
+  right: 20px;
+}
+
+/* Indicator container (dots at the bottom) */
+.indicator-container {
+  position: absolute;
+  bottom: 20px;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  z-index: 10;
+}
+
+.indicator {
+  width: 15px;
+  height: 15px;
+  margin: 0 5px;
+  background-color: rgba(255, 255, 255, 0.5);
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.indicator.active {
+  background-color: white;
+}
+
+/* Responsive Styles for mobile, tablet, and desktop */
+@media (max-width: 768px) {
+  .scroller-container {
+    height: 250px; /* Reduced height on tablets */
   }
-  
-  .scroller-images {
-    display: flex;
-    transition: transform 0.3s ease-in-out;
+
+  .scroller-image {
     width: 100%;
     height: 100%;
-    
-    justify-content: center;
   }
-  
-  .scroller-image {
-    width: 100%; /* Make image take up full container width */
-    max-width: 100%; /* Ensure image doesn't stretch beyond container */
-    height: 100%; /* Maintain aspect ratio */
-    
-  }
-  
-  /* Style for buttons (arrows) */
+
   .scroll-btn {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    background-color: rgba(0, 0, 0, 0.5);
-    color: white;
-    font-size: 2rem; /* Use rem for relative sizing */
-    border: none;
-    padding: 10px;
-    cursor: pointer;
-    z-index: 10;
+    font-size: 1.5rem;
+    padding: 8px;
   }
-  
-  .prev {
-    left: 20px;
-  }
-  
-  .next {
-    right: 20px;
-  }
-  
-  /* Responsive Styles for mobile, tablet, and desktop */
-  @media (max-width: 768px) {
-    .scroller-container {
-      max-width: 100%;
-      height: 300px;
-      
-    }
-   
 
-    /* .scroller-images {
-
-      width: 100%;
-      height: 50%;
-      
-    }  */
-
-    .scroller-image {
-      width: 100%; /* Full width on smaller screens */
-      height: 100%; 
-      margin: 0;
-    }
-  
-    .scroll-btn {
-      font-size: 1.5rem; /* Smaller arrow size on smaller screens */
-      padding: 8px;
-    }
+  .indicator {
+    width: 12px;
+    height: 12px;
   }
-  
-  @media (max-width: 480px) {
-    .scroller-container {
-      max-width: 100%;
-    }
-  
-    .scroller-image {
-      width: 100%; /* Ensure the image fits the container */
-    }
-  
-    .scroll-btn {
-      font-size: 1.2rem; /* Even smaller arrow size for small mobile devices */
-      padding: 5px;
-    }
+}
+
+@media (max-width: 480px) {
+  .scroller-container {
+    height: 200px; /* Reduced height on mobile */
   }
-  
+
+  .scroller-image {
+    width: 100%;
+    height: 100%;
+  }
+
+  .scroll-btn {
+    font-size: 1.2rem;
+    padding: 5px;
+  }
+
+  .indicator {
+    width: 10px;
+    height: 10px;
+  }
+}

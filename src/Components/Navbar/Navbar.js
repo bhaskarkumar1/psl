@@ -4,9 +4,9 @@ import './Navbar.css';
 import logo1 from '../../assets/logo 1.png'; 
 import pslLogo from '../../assets/psl.png'; 
 
-const Nav= () => {
+const Nav = () => {
   const [isMobile, setIsMobile] = useState(false);
-  const [isProductDropdownOpen, setIsProductDropdownOpen] = useState(false);  // State to manage dropdown visibility
+  const [isProductDropdownOpen, setIsProductDropdownOpen] = useState(false);
 
   const toggleMenu = () => {
     setIsMobile(!isMobile);
@@ -34,7 +34,7 @@ const Nav= () => {
           </li>
           
           {/* Product Dropdown */}
-           <li className="nav-item dropdown">
+          <li className="nav-item dropdown">
             <Link to="/products" className="nav-links">Product</Link>
             <span onClick={toggleProductDropdown} className={isProductDropdownOpen ? "arrow-up" : "arrow-down"}>&#9660;</span> {/* Toggle Arrow */}
             
@@ -62,8 +62,9 @@ const Nav= () => {
             <Link to="/career" className="nav-links">Career</Link>
           </li>
 
-          <li className="nav-item">
-            <Link to="/contact" className="nav-links">Contact</Link>
+          {/* Contact Tab */}
+          <li className="nav-item contact-item">
+            <Link to="/contact" className="nav-links contact-link">Contact</Link>
           </li>
         </ul>
         
