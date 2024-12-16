@@ -1,18 +1,24 @@
 import React from 'react';
 import './Footer.css';
-import { Link } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 
 const Footer = () => {
+  const navigate = useNavigate();
+
+  // Scroll to top and navigate to the desired page
+  const handleNavigation = (path) => {
+    navigate(path); // Navigate to the target route
+    window.scrollTo({ top: 0, behavior: 'smooth' }); // Smoothly scroll to the top
+  };
+
   return (
     <div className="main-content">
-      {/* Main content here */}
-
+      {/* Footer Section */}
       <footer className="footer">
         {/* Left Section: Address and Contact */}
         <div className="footer-left">
-          <p>#677, 1ST FLOOR, SUITE #187, 27TH MAIN ROAD</p>
-          <p>13TH CROSS, SECTOR-1, HSR LAYOUT</p>
-          <p>BENGALURU, KARNATAKA - 560102</p>
+          <p>PLOT NO - 1169/1758, Soro, Baleshwar,</p>
+          <p>Odisha - 756045</p>
           <div className="footer-contact">
             <p>Email: contact@paleisoftware.com</p>
             <p>Phone: +91-9876543210</p>
@@ -21,19 +27,36 @@ const Footer = () => {
 
         {/* Center Section: Quick Tabs */}
         <div className="footer-center">
-          <Link to="/">Home</Link>
-          <Link to="/about">About</Link>
-          <Link to="/products">Products</Link>
-          <Link to="/services">Services</Link>
-          <Link to="/contact">Contact Us</Link>
+          <p onClick={() => handleNavigation('/')} style={{ cursor: 'pointer' }}>
+            Home
+          </p>
+          <p onClick={() => handleNavigation('/about')} style={{ cursor: 'pointer' }}>
+            About
+          </p>
+          <p onClick={() => handleNavigation('/products')} style={{ cursor: 'pointer' }}>
+            Products
+          </p>
+          <p onClick={() => handleNavigation('/services')} style={{ cursor: 'pointer' }}>
+            Services
+          </p><p onClick={() => handleNavigation('/career')} style={{ cursor: 'pointer' }}>
+            Career
+          </p>
+          <p onClick={() => handleNavigation('/contact')} style={{ cursor: 'pointer' }}>
+            Contact Us
+          </p>
         </div>
 
         {/* Right Section: Copyright */}
         <div className="footer-right">
           <p>© COPYRIGHT 2024 PALEI SOFTWARE PVT. LTD.</p>
-          <p className="footer-links">
-            <Link to="/license" style={{ color: '#a9a9a9', textDecoration: 'none' }}>Licenses</Link> | 
-            <Link to="/terms" style={{ color: '#a9a9a9', textDecoration: 'none' }}>Terms and Conditions</Link>
+          <p>
+            <span onClick={() => handleNavigation('/license')} style={{ cursor: 'pointer' }}>
+              Licenses
+            </span>{" "}
+            |{" "}
+            <span onClick={() => handleNavigation('/terms')} style={{ cursor: 'pointer' }}>
+              Terms and Conditions
+            </span>
           </p>
         </div>
       </footer>

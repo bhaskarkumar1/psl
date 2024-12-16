@@ -18,19 +18,19 @@ const Contact = () => {
           <p>Feel free to reach out to us through any of the following ways:</p>
           <ul>
             <li>
-              <strong>Email:</strong> support@itcompany.com
+              <strong>Email:</strong> contact@paleisoftware.com
             </li>
             <li>
-              <strong>Phone:</strong> +1 234 567 8900
+              <strong>Phone:</strong> +91-9876543210
             </li>
             <li>
-              <strong>Address:</strong> 123 IT Solutions Lane, Tech City, USA
+              <strong>Address:</strong> PLOT NO - 1169/1758, Soro, Baleshwar, Odisha - 756045
             </li>
           </ul>
           <div className="map-container">
             <iframe
               title="Location Map"
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3153.8364215648175!2d-122.41941608468164!3d37.77492977975938!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8085809c2e9c4d67%3A0x8f6c9a5b8f6cb9e3!2s123%20IT%20Solutions%20Lane%2C%20Tech%20City%2C%20USA!5e0!3m2!1sen!2sin!4v1692029239426!5m2!1sen!2sin"
+              src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d476.57935020445586!2d86.694578977783!3d21.29791021700186!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e1!3m2!1sen!2sin!4v1734342619485!5m2!1sen!2sin"
               width="100%"
               height="200"
               style={{ border: 0 }}

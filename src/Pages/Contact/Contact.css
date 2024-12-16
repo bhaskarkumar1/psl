@@ -1,110 +1,126 @@
 /* General Reset */
 body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f9;
-    color: #333;
-  }
-  
-  .contact-header {
-    background-color: #0044cc;
-    color: white;
-    padding: 20px 0;
-    text-align: center;
-  }
-  
-  .contact-header-container {
-    max-width: 800px;
-    margin: 0 auto;
-  }
-  
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f9;
+  color: #333;
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit; /* Ensure all elements respect the box-sizing */
+}
+
+.contact-header {
+  background-color: #0044cc;
+  color: white;
+  padding: 20px 0;
+  text-align: center;
+}
+
+.contact-header-container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.contact-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px; /* Adds space between blocks */
+  padding: 20px;
+  max-width: 1100px; /* Limits the overall width */
+  margin: 0 auto; /* Centers the content container */
+}
+
+.contact-details,
+.contact-form {
+  background: white;
+  border-radius: 6px;
+  padding: 15px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  flex: 1;
+  min-width: 300px; /* Ensures blocks don’t shrink too much */
+  max-width: 450px; /* Prevents blocks from becoming too wide */
+}
+
+.contact-details {
+  order: 1;
+}
+
+.contact-form {
+  order: 2;
+}
+
+h1,
+h2 {
+  margin-bottom: 10px;
+  font-size: 1.5rem;
+}
+
+.form-group {
+  margin-bottom: 12px;
+}
+
+label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 5px;
+  font-size: 0.9rem;
+}
+
+input,
+textarea {
+  width: 100%; /* Ensure inputs fit their parent container */
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 0.9rem;
+  margin-bottom: 10px;
+  box-sizing: border-box; /* Ensures padding doesn't affect width */
+}
+
+textarea {
+  resize: none;
+}
+
+.submit-button {
+  background-color: #0044cc;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  cursor: pointer;
+  border-radius: 4px;
+  font-size: 0.9rem;
+}
+
+.submit-button:hover {
+  background-color: #003399;
+}
+
+.contact-details ul {
+  list-style: none;
+  padding: 0;
+  font-size: 0.9rem;
+}
+
+.contact-details li {
+  margin-bottom: 8px;
+}
+
+.map-container {
+  margin-top: 10px;
+}
+
+@media (max-width: 768px) {
   .contact-content {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center; /* Centers the blocks horizontally */
-    gap: 20px; /* Adds space between blocks */
-    padding: 20px;
-    max-width: 1200px; /* Limits the overall width */
-    margin: 0 auto; /* Centers the content container */
+    flex-direction: column; /* Stack blocks vertically on small screens */
   }
-  
-  .contact-details, .contact-form {
-    background: white;
-    border-radius: 8px;
-    padding: 20px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    flex: 1;
-    min-width: 350px; /* Ensures blocks don’t shrink too much */
-    max-width: 500px; /* Prevents blocks from becoming too wide */
-  }
-  
-  .contact-details {
-    order: 1;
-  }
-  
+
+  .contact-details,
   .contact-form {
-    order: 2;
+    max-width: 100%; /* Take full width on small screens */
   }
-  
-  h1, h2 {
-    margin-bottom: 15px;
-  }
-  
-  .form-group {
-    margin-bottom: 15px;
-  }
-  
-  label {
-    display: block;
-    font-weight: bold;
-    margin-bottom: 5px;
-  }
-  
-  input, textarea {
-    width: 100%;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-  }
-  
-  textarea {
-    resize: none;
-  }
-  
-  .submit-button {
-    background-color: #0044cc;
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    cursor: pointer;
-    border-radius: 4px;
-    font-size: 16px;
-  }
-  
-  .submit-button:hover {
-    background-color: #003399;
-  }
-  
-  .contact-details ul {
-    list-style: none;
-    padding: 0;
-  }
-  
-  .contact-details li {
-    margin-bottom: 10px;
-  }
-  
-  .map-container {
-    margin-top: 15px;
-  }
-  
-  @media (max-width: 768px) {
-    .contact-content {
-      flex-direction: column; /* Stack blocks vertically on small screens */
-    }
-  
-    .contact-details, .contact-form {
-      max-width: 100%; /* Take full width on small screens */
-    }
-  }
-  
+}

@@ -4,13 +4,18 @@ import "./Product.css";
 const Products = () => {
   return (
     <div className="product-page">
-      <div className="product-header">
-        <h1 className="product-title">License Management Tool</h1>
-        <p className="product-overview">
-          Our License Management Tool offers a comprehensive solution to manage software licenses for businesses of all sizes.
-        </p>
-      </div>
+      {/* Header Section */}
+      <header className="product-header">
+        <div className="product-header-container">
+          <h1>License Management Tool</h1>
+          <p>
+            Our License Management Tool offers a comprehensive solution to
+            manage software licenses for businesses of all sizes.
+          </p>
+        </div>
+      </header>
 
+      {/* Key Features Section */}
       <div className="product-section">
         <h2>Key Features</h2>
         <ul>
@@ -22,6 +27,7 @@ const Products = () => {
         </ul>
       </div>
 
+      {/* Technical Specifications Section */}
       <div className="product-section">
         <h2>Technical Specifications</h2>
         <ul>
@@ -32,6 +38,7 @@ const Products = () => {
         </ul>
       </div>
 
+      {/* Pricing Plans Section */}
       <div className="product-section">
         <h2>Pricing Plans</h2>
         <table>
@@ -62,23 +69,13 @@ const Products = () => {
         </table>
       </div>
 
+      {/* Call to Action Section */}
       <div className="product-section">
-        <h2>Customer Testimonials</h2>
-        <p>"This tool saved us so much time managing our licenses. It's easy to use, and the automated reminders helped us avoid penalties. We highly recommend it!" - John Doe, IT Manager, XYZ Corp.</p>
-      </div>
-
-      <div className="product-section">
-        <h2>Call to Action</h2>
+        <h2>Get Started</h2>
         <button className="cta-button">Start Your Free Trial</button>
         <button className="cta-button">Request a Demo</button>
-        <button className="cta-button">Contact Sales for Enterprise Solutions</button>
+        <button className="cta-button">Contact Sales</button>
       </div>
-
-      {/* <div className="product-section">
-        <h2>FAQs</h2>
-        <p><strong>Q:</strong> What is the difference between the Basic, Professional, and Enterprise plans?</p>
-        <p><strong>A:</strong> The Basic plan is for small businesses, while the Professional and Enterprise plans offer additional features like integrations and unlimited licenses.</p>
-      </div> */}
     </div>
   );
 };
