@@ -5,7 +5,7 @@ const Career = () => {
   const jobList = [
     {
       title: "Junior Developer",
-      logo: "https://via.placeholder.com/50", // Replace with actual logo URL
+      number: "1",
       description: `As a Junior Developer, you will collaborate with the development team to create,
         test, and maintain software applications. You will gain hands-on experience with
         coding, debugging, and delivering user-friendly solutions. A passion for learning
@@ -21,7 +21,7 @@ const Career = () => {
     },
     {
       title: "Backend Developer (C)",
-      logo: "https://via.placeholder.com/50", // Replace with actual logo URL
+      number: "2",
       description: `We are seeking a Backend Developer skilled in C programming to build and maintain
         scalable server-side systems. You will design APIs, optimize performance, and
         ensure security while working on enterprise-level applications.`,
@@ -36,7 +36,7 @@ const Career = () => {
     },
     {
       title: "Data Analyst",
-      logo: "https://via.placeholder.com/50", // Replace with actual logo URL
+      number: "3",
       description: `Join our team as a Data Analyst to uncover insights that drive decision-making.
         Analyze large datasets, create reports, and provide recommendations to enhance
         business performance. Strong analytical and technical skills are a must.`,
@@ -51,7 +51,7 @@ const Career = () => {
     },
     {
       title: "Marketing Manager",
-      logo: "https://via.placeholder.com/50", // Replace with actual logo URL
+      number: "4",
       description: `As a Marketing Manager, you will lead campaigns to promote our brand and
         drive engagement. Develop strategies, analyze campaign performance, and
         collaborate with cross-functional teams to achieve marketing goals.`,
@@ -76,7 +76,7 @@ const Career = () => {
         {jobList.map((job, index) => (
           <div className="job-card" key={index}>
             <div className="job-heading">
-              <img src={job.logo} alt={`${job.title} logo`} className="job-logo" />
+              <div className="job-number">{job.number}</div>
               <h2>{job.title}</h2>
             </div>
             <p className="job-description">{job.description}</p>

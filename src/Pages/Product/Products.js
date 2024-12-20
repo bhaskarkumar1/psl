@@ -1,83 +1,48 @@
 import React from "react";
 import "./Product.css";
 
-const Products = () => {
+const Product = () => {
   return (
     <div className="product-page">
       {/* Header Section */}
       <header className="product-header">
-        <div className="product-header-container">
-          <h1>License Management Tool</h1>
-          <p>
-            Our License Management Tool offers a comprehensive solution to
-            manage software licenses for businesses of all sizes.
-          </p>
+        <div className="product-header-content">
+          <h1>Our Products</h1>
+          <p>Discover our range of innovative tools and solutions to empower your business and operations.</p>
         </div>
       </header>
 
-      {/* Key Features Section */}
-      <div className="product-section">
-        <h2>Key Features</h2>
-        <ul>
-          <li>Software License Tracking</li>
-          <li>Real-Time Monitoring</li>
-          <li>Customizable Reports</li>
-          <li>Cloud Integration</li>
-          <li>Renewal Notifications</li>
-        </ul>
-      </div>
+      {/* Product Content */}
+      <div className="product-content">
+        {/* Testing Tools Block */}
+        <div className="product-section">
+          <h2>Testing Tools</h2>
+          <p>
+            Explore our cutting-edge testing tools designed to ensure the quality, reliability, and performance of your software and hardware.
+          </p>
+          <button className="get-started-btn">Get Started</button>
+        </div>
 
-      {/* Technical Specifications Section */}
-      <div className="product-section">
-        <h2>Technical Specifications</h2>
-        <ul>
-          <li>Compatibility: Windows, Linux, MacOS</li>
-          <li>Security: GDPR compliant, encrypted data</li>
-          <li>Integrations: Microsoft SCCM, Jira, ServiceNow</li>
-          <li>Data Storage: Cloud-based with unlimited capacity</li>
-        </ul>
-      </div>
+        {/* Hardware Tools Block */}
+        <div className="product-section">
+          <h2>Hardware Tools</h2>
+          <p>
+            Our hardware tools provide robust and reliable solutions for all your technical requirements, ensuring seamless operations.
+          </p>
+          <button className="get-started-btn">Get Started</button>
+        </div>
 
-      {/* Pricing Plans Section */}
-      <div className="product-section">
-        <h2>Pricing Plans</h2>
-        <table>
-          <thead>
-            <tr>
-              <th>Plan Name</th>
-              <th>Features</th>
-              <th>Price</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>Basic</td>
-              <td>Track up to 10 licenses, basic reports</td>
-              <td>$49/month</td>
-            </tr>
-            <tr>
-              <td>Professional</td>
-              <td>Track up to 50 licenses, advanced reports</td>
-              <td>$149/month</td>
-            </tr>
-            <tr>
-              <td>Enterprise</td>
-              <td>Unlimited licenses, integrations, priority support</td>
-              <td>$499/month</td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-
-      {/* Call to Action Section */}
-      <div className="product-section">
-        <h2>Get Started</h2>
-        <button className="cta-button">Start Your Free Trial</button>
-        <button className="cta-button">Request a Demo</button>
-        <button className="cta-button">Contact Sales</button>
+        {/* LMTools Block */}
+        <div className="product-section">
+          <h2>LMTools</h2>
+          <p>
+            Unlock the power of efficiency with our advanced LMTools, crafted to streamline your processes and enhance productivity.
+          </p>
+          <button className="get-started-btn">Get Started</button>
+        </div>
       </div>
     </div>
   );
 };
 
-export default Products;
+export default Product;

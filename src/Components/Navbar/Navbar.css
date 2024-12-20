@@ -2,7 +2,7 @@
 .navbar {
   position: relative;
   background-color: #ffffff; /* Clean white background */
-  padding: 0.5rem 1rem; /* Reduced padding to decrease the navbar height */
+  padding: 0.3rem 2rem; /* Further reduced padding to make navbar shorter */
   z-index: 1000;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Light shadow for separation */
 }
@@ -21,22 +21,21 @@
 }
 
 .navbar-logo-lm {
-  height: 35px; /* Adjust logo size */
+  height: 30px; /* Further reduce logo size */
   margin-right: 10px;
 }
 
 .navbar-logo-psl {
-  height: 25px; /* Adjust size of PSL logo */
+  height: 20px; /* Further reduce size of PSL logo */
 }
 
 .nav-menu {
   display: flex;
   list-style-type: none;
   padding: 0;
-  margin-right: 40px;
-  font-size: 0.9rem; /* Reduced font size for compactness */
+  font-size: 0.9rem; /* Slightly smaller font size */
   align-items: center;
-  gap: 1.5rem; /* Slightly more space between items */
+  gap: 1.8rem; /* Slightly reduce space between items */
 }
 
 .nav-item {
@@ -87,10 +86,6 @@
   background-color: #0056b3; /* Darker blue for hover effect */
 }
 
-.nav-item.contact-item {
-  margin-left: 1rem; /* Adjusted for consistency */
-}
-
 /* Hamburger Menu */
 .hamburger {
   display: none;
@@ -111,12 +106,27 @@
 }
 
 .arrow-up, .arrow-down {
-  color: #333333; /* Dark color for arrows */
-  margin-left: 5px;
   font-size: 16px;
   font-weight: bold;
   display: inline-block;
   cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+/* Arrow pointing down (default state) */
+.arrow-down {
+  transform: rotate(0deg); /* Default down arrow */
+}
+
+/* Arrow pointing up (when the dropdown is open) */
+.arrow-up {
+  transform: rotate(180deg); /* Rotate arrow when dropdown is open */
+}
+
+/* Arrow Hover Effect */
+.arrow-up:hover, .arrow-down:hover {
+  color: #007BFF; /* Change arrow color on hover */
+  transform: scale(1.2); /* Slightly enlarge the arrow on hover */
 }
 
 .dropdown-menu {

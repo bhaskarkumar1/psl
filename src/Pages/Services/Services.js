@@ -1,8 +1,13 @@
 import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faCode, faBug } from "@fortawesome/free-solid-svg-icons";
+import {
+  faCode,
+  faBug,
+  faMobileAlt,
+  faCloud,
+  faTools,
+} from "@fortawesome/free-solid-svg-icons";
 import "./Services.css";
-import { Link } from "react-router-dom";
 
 const Services = () => {
   return (
@@ -10,68 +15,83 @@ const Services = () => {
       <header className="services-header">
         <div className="services-header-container">
           <h1>Our Services</h1>
-          <p>Explore our expertise in delivering top-notch solutions for your business needs.</p>
+          <p>Explore our expertise in delivering innovative, efficient, and customized solutions to drive your business success.</p>
         </div>
       </header>
 
       <div className="services-content">
-        {/* Software Development Section */}
+        {/* Service Blocks */}
         <div className="service-section">
-          <div className="text-content">
-            <h2>
-              <FontAwesomeIcon icon={faCode} className="icon" /> Software Development
-            </h2>
-            <p>
-              Our software development services include crafting custom applications,
-              enterprise solutions, and mobile apps. We leverage modern technologies to
-              create scalable, reliable, and efficient solutions tailored to your business
-              needs. Our development process ensures seamless integration, enhanced
-              performance, and user satisfaction.
-            </p>
-            <ul>
-              <li>Custom Application Development</li>
-              <li>Enterprise Software Solutions</li>
-              <li>Mobile App Development</li>
-              <li>Cloud-Based Solutions</li>
-            </ul>
-            <button className="learn-more-btn"><span><Link to='/softwaredevelopment'>Get Started</Link></span></button>
-          </div>
-          <div className="image-content">
-            <img
-              src="https://via.placeholder.com/400x300"
-              alt="Software Development"
-            />
-          </div>
+          <h2>
+            <FontAwesomeIcon icon={faCode} className="icon" /> Software Development
+          </h2>
+          <p>
+            We design and develop robust, scalable, and tailored software solutions
+            that meet your unique business challenges. From custom applications to
+            enterprise-level solutions, our expertise ensures seamless performance
+            and user satisfaction.
+          </p>
+          <button className="learn-more-btn">Get Started</button>
         </div>
 
-        {/* Software Testing Section */}
-        <div className="service-section reverse">
-          <div className="image-content">
-            <img
-              src="https://via.placeholder.com/400x300"
-              alt="Software Testing"
-            />
-          </div>
-          <div className="text-content">
-            <h2>
-              <FontAwesomeIcon icon={faBug} className="icon" /> Software Testing
-            </h2>
-            <p>
-              Our software testing services ensure your applications are reliable and
-              bug-free. From functional testing to automation testing, our QA experts
-              meticulously evaluate every aspect of your software. We identify and resolve
-              potential issues before deployment, ensuring smooth operations and enhanced
-              user experience.
-            </p>
-            <ul>
-              <li>Functional Testing</li>
-              <li>Performance Testing</li>
-              <li>Security Testing</li>
-              <li>Automation Testing</li>
-            </ul>
-            <button className="learn-more-btn"><span><Link to='/softwaretesting'>Get Started</Link></span></button>
-            
-          </div>
+        <div className="service-section">
+          <h2>
+            <FontAwesomeIcon icon={faBug} className="icon" /> Software Testing
+          </h2>
+          <p>
+            Our comprehensive software testing services ensure that your products
+            are bug-free, reliable, and optimized for peak performance. Trust us to
+            enhance the quality of your software with rigorous and effective QA processes.
+          </p>
+          <button className="learn-more-btn">Get Started</button>
+        </div>
+
+        <div className="service-section">
+          <h2>
+            <FontAwesomeIcon icon={faMobileAlt} className="icon" /> Mobile App Development
+          </h2>
+          <p>
+            Transform your ideas into interactive, user-friendly mobile applications.
+            We deliver high-performing apps for both iOS and Android, ensuring an
+            exceptional user experience and robust functionality.
+          </p>
+          <button className="learn-more-btn">Get Started</button>
+        </div>
+
+        <div className="service-section">
+          <h2>
+            <FontAwesomeIcon icon={faCloud} className="icon" /> Cloud Computing
+          </h2>
+          <p>
+            Embrace the future with our cloud computing solutions. From migration to
+            cloud-native applications, we provide secure, scalable, and cost-effective
+            infrastructure for your business growth.
+          </p>
+          <button className="learn-more-btn">Get Started</button>
+        </div>
+
+        <div className="service-section">
+          <h2>
+            <FontAwesomeIcon icon={faCode} className="icon" /> Web Development
+          </h2>
+          <p>
+            Elevate your online presence with stunning, responsive, and dynamic websites.
+            Our web development services focus on delivering user-friendly interfaces,
+            seamless navigation, and cutting-edge functionality tailored to your brand.
+          </p>
+          <button className="learn-more-btn">Get Started</button>
+        </div>
+
+        <div className="service-section">
+          <h2>
+            <FontAwesomeIcon icon={faTools} className="icon" /> IT Support
+          </h2>
+          <p>
+            Stay ahead with our proactive IT support services. We provide 24/7
+            assistance, troubleshooting, and advanced solutions to minimize downtime
+            and ensure your operations run smoothly.
+          </p>
+          <button className="learn-more-btn">Get Started</button>
         </div>
       </div>
     </div>

@@ -42,13 +42,13 @@ const Nav = () => {
             {isProductDropdownOpen && (
               <ul className="dropdown-menu">
                 <li className="dropdown-item">
-                  <Link to="/lmtools" className="nav-links">LMtools</Link>
+                  <Link to="/lmtools" className="nav-links">Testing Tools</Link>
                 </li>
                 <li className="dropdown-item">
-                  <Link to="/freelmtools" className="nav-links">FreeLMtools</Link>
+                  <Link to="/freelmtools" className="nav-links">LMtools</Link>
                 </li>
                 <li className="dropdown-item">
-                  <Link to="/hardwaretools" className="nav-links">Hardwaretools</Link>
+                  <Link to="/hardwaretools" className="nav-links">Hardware Items</Link>
                 </li>
               </ul>
             )}

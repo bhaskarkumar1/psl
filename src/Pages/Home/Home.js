@@ -4,6 +4,7 @@ import ImageCarousel from '../../Components/ImageCarousel/ImageCarousel'
 
 const Home= () => {
   return (
+    
     <div>
       <ImageCarousel/>
       {/* Hero Section */}

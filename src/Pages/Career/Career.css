@@ -1,104 +1,140 @@
 /* General Reset */
 body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f9;
-    color: #333;
-  }
-  
-  /* Header */
-  .career-header {
-    background-color: #0044cc;
-    color: white;
-    text-align: center;
-    padding: 30px 0;
-  }
-  
-  .career-header h1 {
-    margin: 0;
-    font-size: 2.5rem;
-  }
-  
-  .career-header p {
-    margin-top: 10px;
-    font-size: 1.2rem;
-  }
-  
-  /* Job List */
-  .job-list {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-    padding: 20px;
-    max-width: 1200px;
-    margin: 20px auto;
-  }
-  
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f9;
+  color: #333;
+}
+
+/* Header */
+.career-header {
+  background-color: #0044cc;
+  color: white;
+  text-align: center;
+  padding: 30px 0;
+  border-radius: 0px;
+}
+
+.career-header h1 {
+  margin: 0;
+  font-size: 1.5rem;
+}
+
+.career-header p {
+  margin-top: 10px;
+  font-size: 1rem;
+}
+
+/* Job List */
+.job-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  padding: 10px;
+  max-width: 1200px;
+  margin: 20px auto;
+}
+
+.job-card {
+  flex: 1 1 calc(48% - 20px);
+  background: white;
+  padding: 20px;
+  border: 1px solid #ccc;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.job-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.job-card h2 {
+  margin: 0;
+  font-size: 1.2rem;
+  color: #0044cc;
+}
+
+.job-card .job-description {
+  margin: 10px 0;
+  line-height: 1.6;
+  font-size: 0.9rem;
+}
+
+.job-heading {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+.job-number {
+  background-color: #0044cc;
+  color: white;
+  font-size: 1.2rem;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+}
+
+.job-card ul {
+  list-style: disc;
+  padding-left: 20px;
+}
+
+.job-card ul li {
+  margin-bottom: 8px;
+  font-size: 0.85rem;
+}
+
+.job-details {
+  margin: 10px 0 15px;
+}
+
+.job-details p {
+  margin: 5px 0;
+  font-size: 0.85rem;
+}
+
+/* Apply Button */
+.apply-button {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 10px 20px;
+  background-color: #0044cc;
+  color: white;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s;
+  font-size: 0.9rem;
+  border-radius: 5px;
+  text-align: center;
+}
+
+.apply-button:hover {
+  background-color: #003399;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transform: scale(1.05);
+}
+
+/* Align Paragraph and Button */
+.job-description,
+.apply-button {
+  text-align: left;
+  margin-bottom: 10px;
+}
+
+.job-description {
+  margin-bottom: 20px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
   .job-card {
-    flex: 1 1 calc(48% - 20px); /* Adjusted width to fit two blocks per row */
-    background: white;
-    padding: 20px;
-    border: 1px solid #ccc;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    flex: 1 1 100%;
   }
-  
-  .job-card h2 {
-    margin: 0;
-    font-size: 1.5rem;
-    color: #0044cc;
-  }
-  
-  .job-card .job-description {
-    margin: 10px 0;
-    line-height: 1.6;
-  }
-  
-  .job-heading {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    margin-bottom: 15px;
-  }
-  
-  .job-logo {
-    width: 50px;
-    height: 50px;
-    object-fit: contain;
-  }
-  
-  .job-card ul {
-    list-style: disc;
-    padding-left: 20px;
-  }
-  
-  .job-card ul li {
-    margin-bottom: 8px;
-  }
-  
-  .job-details p {
-    margin: 5px 0;
-    font-size: 0.9rem;
-  }
-  
-  .apply-button {
-    margin-top: 15px;
-    padding: 10px 20px;
-    background-color: #0044cc;
-    color: white;
-    border: none;
-    cursor: pointer;
-    transition: all 0.3s;
-    font-size: 0.9rem;
-  }
-  
-  .apply-button:hover {
-    background-color: #003399;
-  }
-  
-  /* Responsive Design */
-  @media (max-width: 768px) {
-    .job-card {
-      flex: 1 1 100%; /* Switch to single column on smaller screens */
-    }
-  }
-  
+}
