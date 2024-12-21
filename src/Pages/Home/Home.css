@@ -1,226 +1,228 @@
-
-  /* Hero Section */
-  .hero {
-    background-color: #FFFFFF;
-    text-align: center;
-    padding: 80px 20px;
-    color: #0066cc
-  }
-  .hero-section {
-  color: #d1d5db;
-  background-color: #1a202c;
-  font-family: Arial, sans-serif;
-  padding: 6rem 0;
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-.container {
+body {
+  font-family: 'Roboto', sans-serif;
+  line-height: 1.6;
+  color: #333;
+  background-color: #f4f4f9;
+}
+
+/* Hero Section */
+.hero {
+  position: relative;
+  width: 100%;
+  height: 90vh;
+  overflow: hidden; /* Hide content that overflows */
+}
+
+.slider {
   display: flex;
+  flex-direction: column; /* Stack images vertically */
+  transition: transform 1s ease-in-out; /* Smooth transition */
+  height: 100%; /* Full height of the hero section */
+}
+
+.slide {
+  height: 100%; /* Full height of the hero section */
+  width: 100%;
+}
+
+.slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ensure the image covers the full area */
+}
+
+.hero .container {
+  position: absolute;
+  bottom: 30px;
+  left: 5%;
+}
+
+.hero-content {
+  max-width: 600px;
+  color: white;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
+}
+
+.hero h1 {
+  font-size: 2rem;
+  letter-spacing: 1px;
+  margin: 0 0 0px 0;
+}
+
+.hero p {
+  font-size: 1rem;
+  margin-bottom: 15px;
+}
+
+.hero .btn {
+  background-color: #0088ff;
+  color: white;
+  padding: 12px 25px;
+  text-decoration: none;
+  font-size: 1rem;
+  border-radius: 10px;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.hero .btn:hover {
+  background-color: #e68900;
+  transform: scale(1.05);
+}
+
+/* About Us Section */
+#about-us {
+  text-align: center;
+  background-color: #f9f9f9;
+  padding: 50px 0;
+}
+
+#about-us h2 {
+  font-size: 2.5rem;
+  color: #0077cc;
+  margin-bottom: 30px;
+}
+
+.about-us-content {
+  display: flex;
+  justify-content: space-between;
+  gap: 30px;
   flex-wrap: wrap;
-  align-items: center;
+}
+
+.about-us-image {
+  flex: 1 1 50%; /* Increased width for image */
+  border-radius: 5px;
+}
+
+.about-us-image img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 5px;
+}
+
+.about-us-text {
+  flex: 1 1 45%; /* Adjusted width of text */
+  display: flex;
+  flex-direction: column;
   justify-content: center;
-  padding: 0 1.25rem;
+  text-align: left;
+}
+
+.about-us-text p {
+  font-size: 1.2rem;
+  color: #555;
+  margin-bottom: 15px;
+}
+
+.about-us-text .btn {
+  background-color: #0088ff;
+  color: white;
+  padding: 12px 25px;
+  text-decoration: none;
+  font-size: 1rem;
+  border-radius: 10px;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  align-self: flex-end; /* Fixed the button to the right */
+}
+
+.about-us-text .btn:hover {
+  background-color: #e68900;
+  transform: scale(1.05);
+}
+
+/* Our Clients Section */
+#our-clients {
+  background-color: #f4f4f9;
+  padding: 50px 0;
+  text-align: center;
+}
+
+#our-clients .container {
   max-width: 1200px;
   margin: 0 auto;
 }
 
-.text-content {
-  flex: 1;
-  text-align: center;
-  margin-bottom: 4rem;
+#our-clients h2 {
+  font-size: 2.5rem;
+  color: #0077cc;
+  margin-bottom: 20px;
 }
 
-@media (min-width: 768px) {
-  .text-content {
-    text-align: left;
-    margin-bottom: 0;
-  }
+#our-clients p {
+  font-size: 1.2rem;
+  color: #555;
+  margin-bottom: 40px;
 }
 
-.title {
-  font-size: 2.25rem;
-  color: #ffffff;
-  font-weight: 500;
-  margin-bottom: 1rem;
-}
-
-@media (min-width: 640px) {
-  .title {
-    font-size: 2.5rem;
-  }
-}
-
-.description {
-  margin-bottom: 2rem;
-  line-height: 1.5;
-}
-
-.buttons {
+.clients-list {
   display: flex;
   justify-content: center;
+  gap: 30px;
 }
 
-@media (min-width: 768px) {
-  .buttons {
-    justify-content: flex-start;
-  }
+.client-item img {
+  max-width: 150px;
+  height: auto;
 }
 
-.btn-primary {
-  color: #ffffff;
-  background-color: #6366f1;
-  border: none;
-  padding: 0.5rem 1.5rem;
+/* Contact Us Section */
+#contact-us {
+  background-color: #fff;
+  padding: 50px 0;
+  text-align: center;
+}
+
+#contact-us .container {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+#contact-us h2 {
+  font-size: 2.5rem;
+  color: #0077cc;
+  margin-bottom: 20px;
+}
+
+#contact-us p {
+  font-size: 1.2rem;
+  color: #555;
+  margin-bottom: 40px;
+}
+
+#contact-us form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+#contact-us input,
+#contact-us textarea {
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
   font-size: 1rem;
-  border-radius: 0.375rem;
-  cursor: pointer;
-}
-
-.btn-primary:hover {
-  background-color: #4f46e5;
-}
-
-.btn-secondary {
-  margin-left: 1rem;
-  color: #9ca3af;
-  background-color: #374151;
-  border: none;
-  padding: 0.5rem 1.5rem;
-  font-size: 1rem;
-  border-radius: 0.375rem;
-  cursor: pointer;
-}
-
-.btn-secondary:hover {
-  background-color: #4b5563;
-  color: #ffffff;
-}
-
-.image-content {
-  flex: 1;
-  max-width: 720px;
   width: 100%;
 }
 
-.hero-image {
-  width: 100%;
-  object-fit: cover;
-  border-radius: 0.375rem;
+#contact-us button {
+  background-color: #0088ff;
+  color: white;
+  padding: 12px 25px;
+  border: none;
+  font-size: 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
 }
 
-  
-  .hero h1 {
-    font-size: 3rem;
-    margin-bottom: 10px;
-  }
-  
-  .hero p {
-    font-size: 1.2rem;
-    margin-bottom: 20px;
-  }
-  
-  .hero .btn {
-    background-color: #ffcc00;
-    color: black;
-    padding: 12px 25px;
-    text-decoration: none;
-    font-size: 1.2rem;
-    border-radius: 5px;
-    margin-top: 30px;
-    display: inline-block;
-  }
-  
-  .hero .btn:hover {
-    background-color: #ff9900;
-  }
-  
-  /* Welcome Section */
-  .welcome {
-    background-color: #ffffff;
-    text-align: center;
-    padding: 60px 20px;
-  }
-  
-  .welcome h2 {
-    font-size: 2.5rem;
-    color: #0066cc;
-    margin-bottom: 15px;
-  }
-  
-  .welcome p {
-    font-size: 1.1rem;
-    color: #555;
-    max-width: 800px;
-    margin: 0 auto;
-  }
-  
-  /* Our Vision Section */
-  .vision {
-    background-color: #f9f9f9;
-    text-align: center;
-    padding: 60px 20px;
-  }
-  
-  .vision h2 {
-    font-size: 2.5rem;
-    color: #0066cc;
-    margin-bottom: 15px;
-  }
-  
-  .vision p {
-    font-size: 1.1rem;
-    color: #555;
-    max-width: 800px;
-    margin: 0 auto;
-  }
-  
-  /* Responsive Styles */
-  @media (max-width: 768px) {
-    .hero h1 {
-      font-size: 2rem;
-    }
-  
-    .hero p {
-      font-size: 1rem;
-    }
-  
-    .hero .btn {
-      font-size: 1rem;
-      padding: 10px 20px;
-    }
-  
-    .welcome h2 {
-      font-size: 2rem;
-    }
-  
-    .vision h2 {
-      font-size: 2rem;
-    }
-  
-    .welcome p, .vision p {
-      font-size: 1rem;
-    }
-  }
-  
-  @media (max-width: 480px) {
-    .hero h1 {
-      font-size: 1.8rem;
-    }
-  
-    .hero p {
-      font-size: 1rem;
-    }
-  
-    .welcome h2 {
-      font-size: 1.8rem;
-    }
-  
-    .vision h2 {
-      font-size: 1.8rem;
-    }
-  
-    .hero .btn {
-      font-size: 1rem;
-      padding: 8px 16px;
-    }
-  }
-  
+#contact-us button:hover {
+  background-color: #e68900;
+}

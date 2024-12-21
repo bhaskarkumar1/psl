@@ -1,0 +1,80 @@
+/* Container for the product details */
+.product-details-container {
+    display: flex;
+    justify-content: space-between;
+    margin: 40px auto;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: #f9f9f9;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    max-width: 1200px;
+    width: 100%;
+    margin-top: 20px;
+    margin-bottom: 40px;
+  }
+  
+  /* Hover effect on product details */
+  .product-details-container:hover {
+    transform: scale(1.03);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+  }
+  
+  /* Left side content */
+  .product-content {
+    flex: 1;
+    padding-right: 20px;
+  }
+  
+  .product-heading {
+    font-size: 28px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 15px;
+    text-transform: capitalize;
+  }
+  
+  .product-paragraph {
+    font-size: 18px;
+    line-height: 1.6;
+    color: #666;
+    margin-bottom: 20px;
+  }
+  
+  /* Right side image */
+  .product-image {
+    flex: 1;
+    max-width: 500px;
+  }
+  
+  .product-image img {
+    width: 100%;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  /* Hover effect on the image */
+  .product-image img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+  }
+  
+
+  /* Styling for the Go Back Button */
+.go-back-btn {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 20px;
+  }
+  
+  .go-back-btn:hover {
+    background-color: #0056b3;
+  }
+  

@@ -38,7 +38,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 5px 0; /* Reduced padding */
+  padding: 15px ; /* Reduced padding */
   flex-direction: column; /* Stack items vertically */
 }
 
@@ -60,6 +60,15 @@ body {
 .lm-tools-section:hover {
   transform: translateY(-5px);
   box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+}
+
+/* Glow effect */
+.lm-tools-section:hover,
+.lm-tools-module:hover,
+.about-section:hover,
+.lm-tools-modules-section:hover {
+  box-shadow: 0 0 15px 4px #0044cc; /* Outer glow effect */
+  transition: box-shadow 0.3s ease-in-out, transform 0.3s ease-in-out;
 }
 
 .lm-tools-content {
@@ -114,6 +123,11 @@ body {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.lm-tools-modules-section:hover {
+  transform: translateY(-5px);
 }
 
 .lm-tools-modules-section h2 {
@@ -137,7 +151,7 @@ body {
 
 .lm-tools-module:hover {
   transform: translateY(-5px);
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 0 15px 4px #0044cc; /* Outer glow effect */
 }
 
 .lm-tools-module h3 {
@@ -183,11 +197,6 @@ body {
   justify-content: space-between;
   height: 100%;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.about-section:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
 }
 
 .about-section h2 {

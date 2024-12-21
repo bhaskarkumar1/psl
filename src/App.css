@@ -1,0 +1,70 @@
+/* Importing Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+
+/* Reset styles to ensure consistency */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%; /* Ensure the entire page fills the viewport */
+  margin: 0;
+  padding: 0;
+  font-family: 'Montserrat', sans-serif; /* Default font for the app */
+  background-color: #f9f9f9; /* Light background color */
+}
+
+/* App wrapper to manage layout */
+.app {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* Full viewport height */
+}
+
+/* Main content area */
+.content {
+  flex: 1; /* Grows to fill available space */
+  padding: 0px;
+}
+
+/* Navbar styles */
+.navbar {
+  width: 100%;
+  background-color: #333; /* Dark background */
+  color: #fff; /* White text */
+  padding: 10px 20px;
+}
+
+/* Footer styles */
+.footer {
+  background-color: #222; /* Darker background */
+  color: #fff; /* White text */
+  text-align: center;
+  padding: 20px 10px;
+  font-size: 14px;
+  width: 100%;
+}
+
+/* Links inside footer */
+.footer a {
+  color: #1e90ff; /* Bright blue links */
+  text-decoration: none;
+  margin: 0 5px;
+}
+
+.footer a:hover {
+  text-decoration: underline;
+}
+
+/* Responsive design for mobile */
+@media (max-width: 768px) {
+  .content {
+    padding: 10px; /* Smaller padding for smaller screens */
+  }
+
+  .footer {
+    font-size: 12px; /* Adjust footer font size for smaller screens */
+  }
+}
